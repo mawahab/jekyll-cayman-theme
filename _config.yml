@@ -10,6 +10,8 @@ author:
   url:        https://mawahab.github.io
 
 # Gems
+gems:
+  - jekyll-paginate
 
 #Others
 markdown: kramdown
