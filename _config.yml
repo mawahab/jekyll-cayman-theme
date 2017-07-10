@@ -1,17 +1,25 @@
-# Setup
-title:        Muhammad Abdul WAHAB (Personal page)
-tagline:      PhD Student at CentraleSupélec 
-baseurl:      ""
-paginate:     1
+# Site settings
+title: Muhammad Abdul Wahab
+header-img: img/home-bg.jpg
+email: abdulparis@gmail.com
+copyright_name: 
+description: "PhD Student CentraleSupélec/IETR"
+baseurl: ""
+url: "http://yourdomain.com"
+twitter_username: MAbdulwahabp
+github_username:  mawahab
+facebook_username:  abdulparis
+email_username:  abdulparis@gmail.com
 
-# About/contact
-author:
-  name:       Muhammad Abdul WAHAB
-  url:        https://mawahab.github.io
+# Google Analytics
+# To enable google analytics, uncomment below line with a valid Google Tracking ID
+# google_tracking_id:
 
-# Gems
-gems:
-  - jekyll-paginate
-
-#Others
+# Build settings
 markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]
