@@ -6,9 +6,7 @@ author:     "MAW"
 header-img: "img/post-bg-02.jpg"
 ---
 
-% == === ==== ===== ==== === == = %
-%      L A T E X    N O T E S	  %
-% == === ==== ===== ==== === == = %
+Here are a few tips for Latex.
 
 - Include the following package to obtain \toprule and \midrule commands inside a latex document.
   booktabs package 
