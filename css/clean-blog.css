@@ -401,3 +401,8 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #0085a1;
 }
+#tablediv {
+    width:90%;
+    min-width:800px
+    max-width:1200px;
+}
