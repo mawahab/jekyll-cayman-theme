@@ -403,6 +403,6 @@ body {
 }
 #tablediv {
     width:90%;
-    min-width:800px
+    min-width:100px
     max-width:1000px;
 }
