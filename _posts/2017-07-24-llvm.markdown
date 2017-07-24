@@ -1,0 +1,42 @@
+# Instructions for installing LLVM
+
+For more detailed version, have a look at the following [link](http://llvm.org/docs/GettingStarted.html#an-example-using-the-llvm-tool-chain). 
+
+1. Download and unzip llvm sources
+```shell
+  wget http://llvm.org/releases/3.9.1/llvm-3.9.1.src.tar.xz
+  tar xfv llvm-3.9.1.src.tar.xz
+```
+2. Create a build folder for llvm build
+```shell
+  mkdir llvm-build
+```
+3. Generate CMake files
+```
+  cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=prefix=/install/path
+```
+4. Make with one of the following commands (serial or parallel)
+```
+  make
+  make -j4 # multiple threads 
+```
+
+5. Install
+
+```
+  sudo make install
+```
+
+## Creating LLVM Pass
+
+The structure of the pass should look like the following link 
+[LLVM pass](https://github.com/abenkhadra/llvm-pass-tutorial).
+
+It is a good starting point for learning how to add LLVM passes. 
+The following commands must be run from *llvm-pass-skeleton/passName/*. (Make sure that CMakeLists.txt exists in llvm-pass-skeleton and passName folders. )
+
+```
+  cmake ..
+  make 
+  clang -Xclang -load -Xclang /path/to/libpass*.so *.c
+```
