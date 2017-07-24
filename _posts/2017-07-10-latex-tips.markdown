@@ -22,15 +22,15 @@ Here are a few tips for Latex.
 	```
 
  Example usage : 
-
-	```latex
-	\begin{table}
-		\begin{adjustbox}{max width=\textwidth}
-			\begin{tabular}{llrcr}
-			\end{tabular}
-		\end{adjustbox}
-	\end{table}
-	```
+	
+```latex
+\begin{table}
+	\begin{adjustbox}{max width=\textwidth}
+		\begin{tabular}{llrcr}
+		\end{tabular}
+	\end{adjustbox}
+\end{table}
+```
 
 - Just a reminder, the label in a figure or table applies to the caption so it should be put after the \caption command ! 
 
