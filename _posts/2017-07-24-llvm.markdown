@@ -1,3 +1,10 @@
+---
+layout:     post
+title:      "LLVM build and pass"
+date:       2017-07-10 12:00:00
+author:     "MAW"
+---
+
 # Instructions for installing LLVM
 
 For more detailed version, have a look at the following [link](http://llvm.org/docs/GettingStarted.html#an-example-using-the-llvm-tool-chain). 
