@@ -19,7 +19,7 @@ $(function() {
 		data: $(this).serialize(),
 		dataType: 'json',
 		beforeSend: function() {
-			$contactForm.append("<div class="alert alert--loading">Sending message…</div>");
+			$contactForm.append("<div class='alert alert--loading'>Sending message…</div>");
 		},
 		success: function(data) {
 			$contactForm.find('.alert--loading').hide();
