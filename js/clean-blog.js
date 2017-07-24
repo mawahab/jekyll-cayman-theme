@@ -14,12 +14,12 @@ $(function() {
     $("#contactForm").submit(function(e) {
       e.preventDefault();
       	$.ajax({
-		url: '//formspree.io/abdulparis@gmail.com',
-		method: 'POST',
+		url: "//formspree.io/abdulparis@gmail.com",
+		method: "POST",
 		data: $(this).serialize(),
 		dataType: 'json',
 		beforeSend: function() {
-			$contactForm.append('<div class="alert alert--loading">Sending message…</div>');
+			$contactForm.append("<div class="alert alert--loading">Sending message…</div>");
 		},
 		success: function(data) {
 			$contactForm.find('.alert--loading').hide();
