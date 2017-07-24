@@ -46,6 +46,10 @@ hr.small {
   border-width: 4px;
   border-color: white;
 }
+.is-hidden {
+    display:none;
+    visibility:hidden;
+}
 .navbar-custom {
   background: white;
   position: absolute;
