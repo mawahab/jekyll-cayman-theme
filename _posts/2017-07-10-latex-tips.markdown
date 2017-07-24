@@ -16,6 +16,7 @@ Here are a few tips for Latex.
 	```
 
 - To adjust the width of table, use adjustbox package which allows to force the table to the specified width 
+	
 	```latex
 	\usepackage{adjustbox}
 	```
