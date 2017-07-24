@@ -11,9 +11,9 @@ Here are a few tips for Latex.
 - Include the following package to obtain \toprule and \midrule commands inside a latex document.
   booktabs package 
 
-  ```
-  \usepackage{booktabs}
-  ```
+	```
+	  \usepackage{booktabs}
+	  ```
 
 - To adjust the width of table, use adjustbox package which allows to force the table to the specified width 
 	```latex
