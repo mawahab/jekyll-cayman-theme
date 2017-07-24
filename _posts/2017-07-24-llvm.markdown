@@ -29,7 +29,6 @@ For more detailed version, have a look at the following [link](http://llvm.org/d
 ```
 
 5. Install
-
 ```
   sudo make install
 ```
