@@ -10,11 +10,10 @@ $(function() {
 });
 
 var $contactForm = $('#contact-form');
-// Contact Form Script
 $contactForm.submit(function(e) {
-      e.preventDefault();
+	e.preventDefault();
 	$.ajax({
-		url: '//formspree.io/abdulparis@gmail.com',
+		url: '//formspree.io/your@email.com',
 		method: 'POST',
 		data: $(this).serialize(),
 		dataType: 'json',
