@@ -9,9 +9,9 @@ $(function() {
     $("[data-toggle='tooltip']").tooltip();
 });
 
+var $contactForm = $('#contact-form');
 // Contact Form Script
-$(function() {
-    $("#contactForm").submit(function(e) {
+$contactForm.submit(function(e) {
       e.preventDefault();
 	$.ajax({
 		url: '//formspree.io/abdulparis@gmail.com',
@@ -29,9 +29,9 @@ $(function() {
 			$contactForm.find('.alert--loading').hide();
 			$contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
 		}
-		});
 	});
 });
+
 
 
 /*When clicking on Full hide fail/success boxes */
