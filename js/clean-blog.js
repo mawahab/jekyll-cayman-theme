@@ -13,33 +13,36 @@ $(function() {
 $(function() {
     $("#contactForm").submit(function(e) {
       e.preventDefault();
-    $.ajax({
-		url: '//formspree.io/abdulparis@gmail.com',
-		method: 'POST',
-		data: $(this).serialize(),
-		dataType: 'json',
-		beforeSend: function() {
-			//$contactForm.append('<div class="alert alert--loading">Sending message…</div>');
-			$submit.attr('disabled', true).val('Sending message…');
-		},
-		success: function(data) {
-			//$contactForm.append('<div class="alert alert--success">Message sent!</div>');
-			$submit.val('Message sent!');
-			setTimeout(function() {
-				//$('.alert--success').remove();
-				$submit.attr('disabled', false).val(defaultSubmitText);
-			}, 5000);
-		},
-		error: function(err) {
-			//$contactForm.find('.alert--loading').hide();
-			//$contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
-			$submit.val('Ops, there was an error.');
-			setTimeout(function() {
-				//$('.alert--error').remove();
-				$submit.attr('disabled', false).val(defaultSubmitText);
-			}, 5000);
-		}
-	});
+      $.ajax({
+        url: "//formspree.io/abdulparis@gmail.com",
+        method: "POST",
+        data: $(this).serialize(),
+        dataType: "json",
+        success: function(data){
+          // Success message
+          $('#success').html("<div class='alert alert-success'>");
+          $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+              .append("</button>");
+          $('#success > .alert-success')
+              .append("<strong>Your message has been sent. </strong>");
+          $('#success > .alert-success')
+              .append('</div>');
+
+          //clear all fields
+          $('#contactForm').trigger("reset");
+        },
+        error: function(){
+          // Fail message
+          $('#success').html("<div class='alert alert-danger'>");
+          $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+              .append("</button>");
+          $('#success > .alert-danger').append("<strong>Sorry it seems that my mail server is not responding. Please try again later!");
+          $('#success > .alert-danger').append('</div>');
+          //clear all fields
+          $('#contactForm').trigger("reset");
+        }
+      });
+    });
 });
 
 
